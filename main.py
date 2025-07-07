@@ -1,6 +1,14 @@
+from nicegui import ui
+import bbq
+
+
 def main():
-    print("Hello from trail-dawg!")
+    ui.dark_mode().enable()
+
+    _ = bbq.BBQ()
+
+    ui.run()
 
 
-if __name__ == "__main__":
+if __name__ in {"__main__", "__mp_main__"}:
     main()
