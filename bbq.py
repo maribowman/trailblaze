@@ -5,7 +5,7 @@ import model
 
 class BBQ:
     _orders: list[dict] = []
-    _overview: ui.column = None
+    _overview: ui.aggrid = None
 
     def __init__(self) -> None:
         with ui.card().classes("w-full"):
@@ -36,23 +36,20 @@ class BBQ:
                             "quantity": quantity.value,
                         },
                     ),
+                    # Clear input fields
                     guy.set_value(None),
                     item.set_value(None),
                     quantity.set_value(None),
                 ),
             )
-        self._overview = ui.column().classes("w-full")
+        self._overview = ui.aggrid(
+            {
+                "defaultColDef": {"flex": 1},
+                "columnDefs": model.COLUMNS,
+                "rowData": self._orders,
+            }
+        ).classes("w-full ag-theme-balham-dark")
 
     def _add_order(self, order: dict) -> None:
         self._orders.append(order)
-        self._update_overview()
-
-    def _update_overview(self) -> None:
-        self._overview.clear()
-        with self._overview:
-            with ui.card().classes("w-full"):
-                for order in self._orders:
-                    with ui.row().classes("w-full"):
-                        ui.label(order["guy"])
-                        ui.label(order["item"])
-                        ui.label(order["quantity"])
+        self._overview.update()

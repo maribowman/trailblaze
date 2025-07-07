@@ -1,7 +1,7 @@
 COLUMNS = [
-    {"name": "guy", "label": "Name", "field": "guy", "sortable": True},
-    {"name": "item", "label": "Artikel", "field": "item"},
-    {"name": "quantity", "label": "Menge", "field": "quantity"},
+    {"headerName": "Name", "field": "guy", "sortable": True},
+    {"headerName": "Artikel", "field": "item"},
+    {"headerName": "Menge", "field": "quantity"},
 ]
 
 GUYS = [
