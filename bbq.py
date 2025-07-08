@@ -29,6 +29,8 @@ class BBQ:
             ui.button(
                 "Hinzufügen",
                 on_click=lambda: (
+                    # TODO: Check if all fields have values
+                    # if not guy.value or not item.value or not quantity.value: return
                     self._add_order(
                         {
                             "guy": guy.value,
@@ -47,6 +49,7 @@ class BBQ:
                 "defaultColDef": {"flex": 1},
                 "columnDefs": model.COLUMNS,
                 "rowData": self._orders,
+                "rowSelection": "single",
             }
         ).classes("w-full ag-theme-balham-dark")
 
