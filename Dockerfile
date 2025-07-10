@@ -1,9 +1,11 @@
-FROM python:3.13-slim-bookworm
+FROM zauberzeug/nicegui:latest
+
+RUN apt-get update
 
 WORKDIR /app
-COPY pyproject.toml uv.lock ./
+COPY pyproject.toml uv.lock /app
 RUN pip install uv
-RUN uv sync
+RUN uv sync --frozen
 COPY . .
 
 VOLUME /app/data
