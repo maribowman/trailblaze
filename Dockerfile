@@ -9,6 +9,6 @@ RUN uv sync --locked
 COPY . /app
 
 VOLUME /app/data
-EXPOSE 8080
+EXPOSE 6969
 
 ENTRYPOINT ["uv", "run", "main.py"]
