@@ -4,9 +4,6 @@ import bbq
 
 def main():
     ui.dark_mode().enable()
-
-    _ = bbq.BBQ()
-
     ui.run()
 
 
