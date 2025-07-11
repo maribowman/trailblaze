@@ -1,5 +1,5 @@
 from nicegui import ui
-import bbq
+import bbq  # noqa: F401
 
 
 def main():
