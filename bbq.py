@@ -41,7 +41,7 @@ def bbq() -> None:
     async def delete_order() -> None:
         row = await overview.get_selected_row()
         if row:
-            ui.notify(f"{row['id']}: {row['guy']}  {row['item']}")
+            ui.notify(f"Nix {row['item']} für {row['guy']}! ¯\_(ツ)_/¯")
             repository.delete_order(id=row["id"])
             refresh_orders()
             overview.update()
