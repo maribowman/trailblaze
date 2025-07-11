@@ -1,4 +1,22 @@
-__pycache__
+.venv/
 
-.venv
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.$py.class
+
+dist/
+build/
+*.egg-info/
+.eggs/
+
+.idea/
+.vscode/
+*.swp
+*~
+.DS_Store
+
 .env
+
+*.db
