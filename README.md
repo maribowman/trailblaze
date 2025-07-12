@@ -3,6 +3,8 @@ Demo UI to test a few things and organize a BBQ.
 # Development
 Run `uv run main.py` to start [NiceGUI](https://nicegui.io/) app.
 
+Run `ruff format` and `ruff check` before committing changes. 
+
 # Dockerize on RaspberryPi
 ```sh
 curl -fsSL https://get.docker.com -o get-docker.sh && sudo sh get-docker.sh
