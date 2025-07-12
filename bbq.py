@@ -12,6 +12,8 @@ def bbq() -> None:
     ui.dark_mode().enable()
     repository.setup_database_and_table()
 
+    ui.label("Grillbestellung Wandern 07/25").style("font-size: 4em; font-weight: bold;")
+    ui.link("→ Egeler Website", "https://webapp.metzgerei-egeler.de/home", new_tab=True)
     overview: ui.aggrid = None
 
     def refresh_orders() -> None:
