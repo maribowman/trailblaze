@@ -4,7 +4,7 @@ credentials-file: /home/youruser/.cloudflared/<TUNNEL_ID>.json
 ingress:
   - hostname: <DOMAIN>
     service: http://localhost:80 # must be local target and must not have `/` suffix
-  - hostname: <PREFIX>.<DOMAIN>
+  - hostname: <SUBDOMAIN>.<DOMAIN>
     service: http://localhost:3000
   - service: http_status:404
 
